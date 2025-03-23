@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFA - โซฟามือสอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FFFAEC]">
+    <!-- Navbar -->
+    <nav>
+      <header class="bg-[#578E7E] text-[#FFFAEC] py-4 px-6 flex justify-between items-center">
+        <img src="picture/LoGo.png" alt="logo" class="logo-left w-auto h-16 object-cover" >
+        <input type="text" placeholder="ค้นหาสินค้า..." class="search-box w-100% h-auto bg-[#FFFAEC] px-4 rounded-lg">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:underline">หน้าหลัก</a></li>
+            <li><a href="furniture.html" class="hover:underline">เฟอร์นิเจอร์</a></li>
+            <li><a href="livingroom.html" class="hover:underline">ห้องนั่งเล่น</a></li>
+            <li><a href="bedroom.html" class="hover:underline">ห้องนอน</a></li>
+            <li><a href="kitchen.html" class="hover:underline">ห้องครัว</a></li>
+            <li><a href="favourites.html" class="hover:underline">รายการโปรด</a></li>
+        </ul>
+        <button class="login-btn">เข้าสู่ระบบ | สมัครสมาชิก</button>
+      </header>
+    </nav>
+
+    <div class="mt-6 px-6 flex flex-col md:flex-row gap-8">
+      <!-- Product image section -->
+      <div class="md:w-1/2 relative" id="product-gallery">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <!-- Image container -->
+          <div class="relative h-96 overflow-hidden">
+            <div id="slider-container" class="flex transition-transform duration-300 h-full">
+              <img src="picture/หน้า.png" alt="โซฟาแบรนด์ NITORI ภาพที่ 1" class="w-full h-full object-cover flex-shrink-0">
+              <img src="picture/หลัง.png" alt="โซฟาแบรนด์ NITORI ภาพที่ 2" class="w-full h-full object-cover flex-shrink-0">
+              <img src="picture/ซ้าย.png" alt="โซฟาแบรนด์ NITORI ภาพที่ 3" class="w-full h-full object-cover flex-shrink-0">
+              <img src="picture/ขวา.png" alt="โซฟาแบรนด์ NITORI ภาพที่ 4" class="w-full h-full object-cover flex-shrink-0">
+              <img src="picture/ล่าง.png" alt="โซฟาแบรนด์ NITORI ภาพที่ 5" class="w-full h-full object-cover flex-shrink-0">
+            </div>
+          </div>
+          
+          <!-- Navigation dots -->
+          <div class="absolute left-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
+            <button onclick="moveToSlide(0)" class="w-4 h-4 rounded-full bg-gray-800 dot-indicator" data-index="0"></button>
+            <button onclick="moveToSlide(1)" class="w-4 h-4 rounded-full bg-gray-300 dot-indicator" data-index="1"></button>
+            <button onclick="moveToSlide(2)" class="w-4 h-4 rounded-full bg-gray-300 dot-indicator" data-index="2"></button>
+            <button onclick="moveToSlide(3)" class="w-4 h-4 rounded-full bg-gray-300 dot-indicator" data-index="3"></button>
+            <button onclick="moveToSlide(4)" class="w-4 h-4 rounded-full bg-gray-300 dot-indicator" data-index="4"></button>
+          </div>
+          
+          <!-- Navigation arrows -->
+          <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+            <button onclick="prevSlide()" class="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+            <button onclick="nextSlide()" class="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Favorite button -->
+          <!-- <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button> -->
+        </div>
+      </div>
+      
+      <!-- Product details section -->
+      <div class="md:w-1/2">
+        <h1 class="text-2xl font-bold mb-4">โซฟาแบรนด์ NITORI สีน้ำเงินเข้ม</h1>
+        
+        <!-- Price section -->
+        <div class="mb-6">
+          <p class="text-red-600 text-2xl font-bold">ราคา ฿4,790</p>
+        </div>
+        
+        <!-- Availability -->
+        <div class="flex items-center mb-6">
+          <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-gray-700">ร้านยืนยันตัวตนแล้ว</span>
+        </div>
+        
+        <!-- Action buttons -->
+        <div class="space-y-3">
+          <button class="w-full py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-medium rounded-md transition">เพิ่มสินค้าลงตระกร้า</button>
+          <button class="w-full py-3 bg-green-100 hover:bg-green-200 text-gray-800 font-medium rounded-md transition">ชำระเงิน</button>
+          <button class="w-full py-3 bg-blue-100 hover:bg-blue-200 text-gray-800 font-medium rounded-md transition">ตรวจสอบสถานะ</button>
+        </div>
+        
+        <!-- Product details -->
+        <div class="mt-8">
+          <h2 class="text-lg font-bold mb-2">รายละเอียดสินค้า</h2>
+          <p class="text-gray-700">
+            โซฟาแบรนด์ NITORI สีน้ำเงินเข้ม โครงไม้ธรรมชาติ เป็นโซฟาสำหรับ 2 ที่นั่ง เบาะแบบไม่ยุบตัว อีกทั้งความสะอาด พร้อมใช้งาน
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // สไลเดอร์สำหรับรูปภาพสินค้า
+    let currentSlide = 0;
+    const totalSlides = 5;
+    const sliderContainer = document.getElementById('slider-container');
+    const dotIndicators = document.querySelectorAll('.dot-indicator');
+    
+    // ฟังก์ชันแสดงสไลด์ปัจจุบัน
+    function updateSliderPosition() {
+      sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // อัปเดตสถานะปุ่มจุด (dots)
+      dotIndicators.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.remove('bg-gray-300');
+          dot.classList.add('bg-gray-800');
+        } else {
+          dot.classList.remove('bg-gray-800');
+          dot.classList.add('bg-gray-300');
+        }
+      });
+    }
+    
+    // ฟังก์ชันไปยังสไลด์ถัดไป
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSliderPosition();
+    }
+    
+    // ฟังก์ชันไปยังสไลด์ก่อนหน้า
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSliderPosition();
+    }
+    
+    // ฟังก์ชันไปยังสไลด์ที่ระบุ
+    function moveToSlide(slideIndex) {
+      currentSlide = slideIndex;
+      updateSliderPosition();
+    }
+    
+    // เริ่มต้นสไลด์อัตโนมัติ (ถ้าต้องการ)
+    const slideInterval = setInterval(nextSlide, 5000);
+    // การกดถูกใจ
+    function toggleLike(button) {
+    const icon = button.querySelector("i"); // เลือกไอคอน <i>
+
+    if (icon.classList.contains("bx-heart")) {
+        // เปลี่ยนเป็นหัวใจสีแดง (ถูกใจแล้ว)
+        icon.classList.replace("bx-heart", "bxs-heart");
+        icon.classList.replace("text-gray-500", "text-red-500");
+    } else {
+        // เปลี่ยนกลับเป็นหัวใจปกติ
+        icon.classList.replace("bxs-heart", "bx-heart");
+        icon.classList.replace("text-red-500", "text-gray-500");
+    }
+}
+  </script>
+
+
+    <footer class="bg-[#578E7E] text-white p-6 mt-10">
+        <div class="max-w-6xl mx-auto flex justify-between">
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">บริการลูกค้า</h2>
+                <ul>
+                    <li>การคืนสินค้า/การคืนเงิน</li>
+                    <li>การรับประกันสินค้า</li>
+                    <li>ตรวจสอบสถานะ</li>
+                    <li>คำถามที่พบบ่อย</li>
+                    <li>คู่มือการใช้งาน</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ข้อมูลเพิ่มเติม</h2>
+                <ul>
+                    <li>ข่าวสารและกิจกรรม</li>
+                    <li>ร่วมงานกับเรา</li>
+                    <li>เกี่ยวกับบริษัท</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ติดต่อเรา</h2>
+                <p>Email: 66160122@go.buu.ac.th</p>
+                <p>Tel: 0824642612</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

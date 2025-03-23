@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFur Home - เฟอร์นิเจอร์มือสอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FFFAEC]">
+    <!-- Navbar -->
+    <nav>
+        <header class="bg-[#578E7E] text-[#FFFAEC] py-4 px-6 flex justify-between items-center">
+        <img class="logo-left w-auto h-16 object-cover" src="picture/LoGo.png" alt=" ">
+        <input type="text" placeholder="ค้นหาสินค้า..." class="search-box w-100% h-auto bg-[#FFFAEC] px-4 rounded-lg">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:underline">หน้าหลัก</a></li>
+            <li><a href="furniture.html" class="hover:underline">เฟอร์นิเจอร์</a></li>
+            <li><a href="livingroom.html" class="hover:underline">ห้องนั่งเล่น</a></li>
+            <li><a href="bedroom.html" class="hover:underline">ห้องนอน</a></li>
+            <li><a href="kitchen.html" class="hover:underline">ห้องครัว</a></li>
+            <li><a href="favourites.html" class="hover:underline">รายการโปรด</a></li>
+        </ul>
+        <button class="login-btn">เข้าสู่ระบบ | สมัครสมาชิก</button>
+    </nav>
+    </header>
+    <h2>สินค้าที่ถูกใจ</h2>
+<ul id="favoriteList"></ul>
+<a href="index.html">กลับไปหน้าหลัก</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let list = document.getElementById('favoriteList');
+
+    if (favorites.length === 0) {
+        list.innerHTML = "<p>ไม่มีสินค้าที่ถูกใจ</p>";
+    } else {
+        favorites.forEach(item => {
+            let li = document.createElement("li");
+            li.innerHTML = `${item.name} <button onclick="removeFromFavorite(${item.id})">❌</button>`;
+            list.appendChild(li);
+        });
+    }
+});
+
+function removeFromFavorite(id) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favorites = favorites.filter(item => item.id !== id);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    location.reload();  // รีเฟรชหน้าเพื่ออัปเดตรายการ
+}
+</script>
+
+    <footer class="bg-[#578E7E] text-white p-6 mt-10">
+        <div class="max-w-6xl mx-auto flex justify-between">
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">บริการลูกค้า</h2>
+                <ul>
+                    <li>การคืนสินค้า/การคืนเงิน</li>
+                    <li>การรับประกันสินค้า</li>
+                    <li>ตรวจสอบสถานะ</li>
+                    <li>คำถามที่พบบ่อย</li>
+                    <li>คู่มือการใช้งาน</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ข้อมูลเพิ่มเติม</h2>
+                <ul>
+                    <li>ข่าวสารและกิจกรรม</li>
+                    <li>ร่วมงานกับเรา</li>
+                    <li>เกี่ยวกับบริษัท</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ติดต่อเรา</h2>
+                <p>Email: 66160122@go.buu.ac.th</p>
+                <p>Tel: 0824642612</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

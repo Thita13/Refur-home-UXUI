@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFur Home - เฟอร์นิเจอร์มือสอง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FFFAEC]">
+    <!-- Navbar -->
+    <nav>
+        <header class="bg-[#578E7E] text-[#FFFAEC] py-4 px-6 flex justify-between items-center">
+        <img class="logo-left w-auto h-16 object-cover" src="picture/LoGo.png" alt=" ">
+        <input type="text" placeholder="ค้นหาสินค้า..." class="search-box w-100% h-auto bg-[#FFFAEC] px-4 rounded-lg">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:underline">หน้าหลัก</a></li>
+            <li><a href="furniture.html" class="hover:underline">เฟอร์นิเจอร์</a></li>
+            <li><a href="livingroom.html" class="hover:underline">ห้องนั่งเล่น</a></li>
+            <li><a href="bedroom.html" class="hover:underline">ห้องนอน</a></li>
+            <li><a href="kitchen.html" class="hover:underline">ห้องครัว</a></li>
+            <li><a href="favourites.html" class="hover:underline">รายการโปรด</a></li>
+        </ul>
+        <button class="login-btn">เข้าสู่ระบบ | สมัครสมาชิก</button>
+    </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="picture/เฟอร์นิเจอร์คุณภาพดี.png" alt="Banner" class="w-full h-auto object-cover">
+    </section>
+
+    <!-- หมวดหมู่สินค้า -->
+    <section class="max-w-7xl mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center text-[#578E7E]">หมวดหมู่สินค้า | เฟอร์นิเจอร์</h2>
+        <div class="grid grid-cols-5 gap-6 mt-6">
+            <!-- ตัวอย่างหมวดหมู่สินค้า -->
+            <a href="livingroom.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/sofa.png" alt="โซฟา" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">โซฟา</p>
+            </a>
+            <a href="bedroom.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/bed.png" alt="เตียง" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">เตียง</p>
+            </a>
+            <a href="closet.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/closet.png" alt="ตู้เสื้อผ้า" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">ตู้เสื้อผ้า</p>
+            </a>
+            <a href="kitchen.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/kitchen.png" alt="ครัว" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">ครัว</p>
+            </a>
+            <a href="diningtable.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/dinningtable.png" alt="โต๊ะอาหาร" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">โต๊ะอาหาร</p>
+            </a>
+            <a href="table.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/table.png" alt="โต๊ะ" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">โต๊ะ</p>
+            </a>
+            <a href="chair.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/chair.png" alt="เก้าอี้" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">เก้าอี้</p>
+            </a>
+            <a href="toilet.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/toilet.png" alt="สุขภัณฑ์" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">สุขภัณฑ์</p>
+            </a>
+            <a href="washbasin.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/washbasin.png" alt="อ่างล้างหน้า" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">อ่างล้างหน้า</p>
+            </a>
+            <a href="faucet.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+                <img src="picture/faucet.png" alt="หัวก๊อก" class="w-32 h-32 object-contain">
+                <p class="mt-2 text-center">หัวก๊อก</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- รายการแนะนำ -->
+    <section>
+        <div class="max-w-6xl mx-auto p-4">
+        <h2 class="text-3xl font-bold text-center text-[#578E7E]">สินค้าที่คุณอาจสนใจ</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 1 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/โซฟาสีน้ำเงิน.png" alt="โซฟาสีน้ำเงิน" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">โซฟาแบรนด์ NITORI ทรงโมเดิร์น สีน้ำเงินเข้ม</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 4,790.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition" onclick="location.href='detail.html'">
+                ซื้อสินค้า
+                </button>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/เตียง1.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">เตียงไม้ ชั้น 2 แบบโต๊ะข้างล่าง ขนาด 3.5 ฟุต</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 12,800.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/เตียงนอน5ฟ.png" alt="เตียงพร้อมฟูก" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">เตียง TEMPUR Prestige Bed Frame ขนาด 6 ฟุต King size</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 35,900.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/ฟูก6ฟุต.png" alt="ฟูก6ฟุต" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">ฟูก Lady americana รุ่น denver 6 ฟุต</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 3,500.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/ที่นอนครบเซ็ต.png" alt="ที่นอนครบเซ็ต" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">เตียงพร้อมฟูกขนาด 5 ฟุต</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 8,000.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/โซฟาสีครีม.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">โซฟาเบด ปรับเอนนอนได้</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 9,900.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/ชุดโต๊ะเก้าอี้ยาาว.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">ชุดโต๊ะ 2 เก้าอี้และเก้าอี้ยาาว</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 5,800.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+          <!-- 8  -->
+          <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
+            <div class="relative">
+              <img src="picture/ซิงค์2ก๊อก.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
+                <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
+            </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-medium text-gray-900">ซิงค์ล้างจานสแตนเลส 2 หลุม</h3>
+              <p class="text-gray-500 text-sm mb-2">ราคา</p>
+              <p class="text-red-500 font-bold mb-4">฿ 3,500.00</p>
+              <button class="w-full bg-green-100 text-green-800 py-2 rounded hover:bg-green-200 transition">
+                ซื้อสินค้า
+              </button>
+            </div>
+          </div>
+
+        </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleLike(button) {
+        const icon = button.querySelector("i"); // เลือกไอคอน <i>
+    
+        if (icon.classList.contains("bx-heart")) {
+            // เปลี่ยนเป็นหัวใจสีแดง (ถูกใจแล้ว)
+            icon.classList.replace("bx-heart", "bxs-heart");
+            icon.classList.replace("text-gray-500", "text-red-500");
+        } else {
+            // เปลี่ยนกลับเป็นหัวใจปกติ
+            icon.classList.replace("bxs-heart", "bx-heart");
+            icon.classList.replace("text-red-500", "text-gray-500");
+        }
+    }
+    </script>
+
+    <footer class="bg-[#578E7E] text-white p-6 mt-10">
+        <div class="max-w-6xl mx-auto flex justify-between">
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">บริการลูกค้า</h2>
+                <ul>
+                    <li>การคืนสินค้า/การคืนเงิน</li>
+                    <li>การรับประกันสินค้า</li>
+                    <li>ตรวจสอบสถานะ</li>
+                    <li>คำถามที่พบบ่อย</li>
+                    <li>คู่มือการใช้งาน</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ข้อมูลเพิ่มเติม</h2>
+                <ul>
+                    <li>ข่าวสารและกิจกรรม</li>
+                    <li>ร่วมงานกับเรา</li>
+                    <li>เกี่ยวกับบริษัท</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-bold text-[#FFFAEC]">ติดต่อเรา</h2>
+                <p>Email: 66160122@go.buu.ac.th</p>
+                <p>Tel: 0824642612</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
