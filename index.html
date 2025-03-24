@@ -20,7 +20,6 @@
             <li><a href="livingroom.html" class="hover:underline">ห้องนั่งเล่น</a></li>
             <li><a href="bedroom.html" class="hover:underline">ห้องนอน</a></li>
             <li><a href="kitchen.html" class="hover:underline">ห้องครัว</a></li>
-            <li><a href="favourites.html" class="hover:underline">รายการโปรด</a></li>
         </ul>
         <button class="login-btn">เข้าสู่ระบบ | สมัครสมาชิก</button>
     </nav>
@@ -35,7 +34,6 @@
     <section class="max-w-7xl mx-auto py-10">
         <h2 class="text-3xl font-bold text-center text-[#578E7E]">หมวดหมู่สินค้า | เฟอร์นิเจอร์</h2>
         <div class="grid grid-cols-5 gap-6 mt-6">
-            <!-- ตัวอย่างหมวดหมู่สินค้า -->
             <a href="livingroom.html" class="category-item flex flex-col items-center p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
                 <img src="picture/sofa.png" alt="โซฟา" class="w-32 h-32 object-contain">
                 <p class="mt-2 text-center">โซฟา</p>
@@ -177,7 +175,7 @@
           <!-- 6 -->
           <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
             <div class="relative">
-              <img src="picture/โซฟาสีครีม.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <img src="picture/โซฟาสีครีม.png" alt="โซฟาสีครีม" class="w-full h-48 object-cover">
               <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
                 <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
             </button>
@@ -195,7 +193,7 @@
           <!-- 7 -->
           <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
             <div class="relative">
-              <img src="picture/ชุดโต๊ะเก้าอี้ยาาว.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <img src="picture/ชุดโต๊ะเก้าอี้ยาาว.png" alt="ชุดโต๊ะเก้าอี้ยาาว" class="w-full h-48 object-cover">
               <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
                 <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
             </button>
@@ -213,7 +211,7 @@
           <!-- 8  -->
           <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-100">
             <div class="relative">
-              <img src="picture/ซิงค์2ก๊อก.png" alt="2ชั้น" class="w-full h-48 object-cover">
+              <img src="picture/ซิงค์2ก๊อก.png" alt="ซิงค์2ก๊อก" class="w-full h-48 object-cover">
               <button class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-red-300 transition absolute bottom-2 right-2 shadow-md" onclick="toggleLike(this)">
                 <i class="bx bx-heart text-gray-500 text-2xl transition-all"></i>
             </button>
@@ -234,7 +232,7 @@
 
     <script>
         function toggleLike(button) {
-        const icon = button.querySelector("i"); // เลือกไอคอน <i>
+        const icon = button.querySelector("i");
     
         if (icon.classList.contains("bx-heart")) {
             // เปลี่ยนเป็นหัวใจสีแดง (ถูกใจแล้ว)
